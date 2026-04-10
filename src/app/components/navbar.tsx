@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoImage from "../../../Logo/Logo.png";
+import logoImage from "../../../Logo/Logo-2.png";
 
 type NavbarProps = {
   languageButtonLabel?: string;
