@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoImage from "../../../Logo/Logo-2.png";
+import logoImage from "../../../Logo/Logo.png";
 
 type NavbarProps = {
   languageButtonLabel?: string;
@@ -41,7 +41,11 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" aria-label="Terramet Global FZE LLC" className="inline-flex items-center">
-            <img src={logoImage} alt="Terramet Global FZE LLC logo" className="h-20 w-auto object-contain" />
+            <img
+              src={logoImage}
+              alt="Terramet Global FZE LLC logo"
+              className="h-24 w-auto sm:h-28 object-contain object-left"
+            />
           </a>
 
           {/* Desktop Menu */}
