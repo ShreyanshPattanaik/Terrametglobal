@@ -136,8 +136,8 @@ export function ContactSection() {
               </h4>
               <div className="space-y-2" style={{ fontSize: '0.875rem', color: '#D1D1D1' }}>
                 <div className="flex justify-between">
-                  <span>Monday - Sunday:</span>
-                  <span className="text-[#F47A20]">24/7</span>
+                  <span>Monday - Saturday:</span>
+                  <span className="text-[#F47A20]">7:00 - 19:00</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Execution Coverage:</span>

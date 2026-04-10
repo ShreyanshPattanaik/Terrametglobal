@@ -236,11 +236,10 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div><div className="mb-2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#F47A20" }}>5</div><div className="uppercase tracking-[0.15em]" style={{ fontSize: "0.875rem", fontWeight: 600, color: "#D1D1D1" }}>核心市场</div></div>
                 <div><div className="mb-2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#F47A20" }}>3</div><div className="uppercase tracking-[0.15em]" style={{ fontSize: "0.875rem", fontWeight: 600, color: "#D1D1D1" }}>采购国家</div></div>
                 <div><div className="mb-2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#F47A20" }}>FOB</div><div className="uppercase tracking-[0.15em]" style={{ fontSize: "0.875rem", fontWeight: 600, color: "#D1D1D1" }}>全流程处理</div></div>
-                <div><div className="mb-2" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#F47A20" }}>24/7</div><div className="uppercase tracking-[0.15em]" style={{ fontSize: "0.875rem", fontWeight: 600, color: "#D1D1D1" }}>贸易协调</div></div>
               </div>
             </div>
           </div>
@@ -287,7 +286,7 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
               <div className="p-6 bg-[#3A3A3A] border border-[#8A8A8A]">
                 <h4 className="uppercase tracking-[0.15em] mb-3" style={{ fontSize: "0.875rem", fontWeight: 700, color: "white" }}>服务时间</h4>
                 <div className="space-y-2" style={{ fontSize: "0.875rem", color: "#D1D1D1" }}>
-                  <div className="flex justify-between"><span>周一 - 周日:</span><span className="text-[#F47A20]">24/7</span></div>
+                  <div className="flex justify-between"><span>周一 - 周六:</span><span className="text-[#F47A20]">7:00 - 19:00</span></div>
                   <div className="flex justify-between"><span>执行覆盖:</span><span className="text-[#F47A20]">全球</span></div>
                 </div>
                 <p className="mt-4 text-[#8A8A8A]" style={{ fontSize: "0.75rem" }}>从采购、单证到装船和海运的全流程协同执行。</p>

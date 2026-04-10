@@ -100,7 +100,7 @@ export function GlobalSection() {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div
                 className="mb-2"
@@ -141,20 +141,6 @@ export function GlobalSection() {
                 style={{ fontSize: '0.875rem', fontWeight: 600, color: '#D1D1D1' }}
               >
                 Full-Scope Handling
-              </div>
-            </div>
-            <div>
-              <div
-                className="mb-2"
-                style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 900, color: '#F47A20' }}
-              >
-                24/7
-              </div>
-              <div
-                className="uppercase tracking-[0.15em]"
-                style={{ fontSize: '0.875rem', fontWeight: 600, color: '#D1D1D1' }}
-              >
-                Trade Coordination
               </div>
             </div>
           </div>
