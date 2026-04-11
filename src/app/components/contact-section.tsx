@@ -57,8 +57,8 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 p-3 bg-[#F47A20]">
+                <div className="flex gap-4 items-center">
+                  <div className="flex flex-shrink-0 items-center justify-center p-3 bg-[#F47A20]">
                     <Phone size={24} color="white" />
                   </div>
                   <div>
@@ -87,8 +87,8 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 p-3 bg-[#F47A20]">
+                <div className="flex gap-4 items-center">
+                  <div className="flex flex-shrink-0 items-center justify-center p-3 bg-[#F47A20]">
                     <MapPin size={24} color="white" />
                   </div>
                   <div>

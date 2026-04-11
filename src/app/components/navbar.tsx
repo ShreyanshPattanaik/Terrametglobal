@@ -35,7 +35,7 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#2E2E2E] shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-[#1A1A1A] shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -83,7 +83,7 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
                 <button
                   type="button"
                   onClick={onLanguageToggle}
-                  className="px-6 py-2 border border-white text-white uppercase tracking-widest transition-all hover:bg-white hover:text-[#2E2E2E]"
+                  className="px-6 py-2 border border-white text-white uppercase tracking-widest transition-all hover:bg-white hover:text-[#1A1A1A]"
                   style={{ fontSize: "0.875rem", fontWeight: 600 }}
                 >
                   {languageButtonLabel}
@@ -139,7 +139,7 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
             {languageButtonLabel && onLanguageToggle && (
               <button
                 type="button"
-                className="px-6 py-2 border border-white text-white uppercase tracking-widest text-center transition-all hover:bg-white hover:text-[#2E2E2E]"
+                className="px-6 py-2 border border-white text-white uppercase tracking-widest text-center transition-all hover:bg-white hover:text-[#1A1A1A]"
                 style={{ fontSize: "0.875rem", fontWeight: 600 }}
                 onClick={() => {
                   setIsMobileMenuOpen(false);
