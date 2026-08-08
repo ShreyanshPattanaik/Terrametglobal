@@ -18,8 +18,8 @@ const reasons = [
   },
   {
     icon: TrendingUp,
-    title: "Flexible Structures",
-    description: "Commercially sound spot and long-term contract frameworks",
+    title: "UAE-Based Perspective",
+    description: "A UAE-based perspective for international clients entering regional trade and establishing business operations",
   },
   {
     icon: CheckCircle,

@@ -9,6 +9,7 @@ type NavbarProps = {
     about: string;
     products: string;
     global: string;
+    businessSetup: string;
     contact: string;
   };
 };
@@ -20,6 +21,7 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
     about: "About",
     products: "Products",
     global: "FOB Services",
+    businessSetup: "UAE Business Setup",
     contact: "Contact",
   };
 
@@ -49,7 +51,7 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <a
               href="#about"
               className="uppercase tracking-widest transition-colors hover:text-[#F47A20]"
@@ -70,6 +72,13 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
               style={{ fontSize: '0.875rem', fontWeight: 500, color: isScrolled ? 'white' : 'white' }}
             >
               {navLabels.global}
+            </a>
+            <a
+              href="#uae-business-setup"
+              className="uppercase tracking-widest transition-colors hover:text-[#F47A20]"
+              style={{ fontSize: '0.875rem', fontWeight: 500, color: isScrolled ? 'white' : 'white' }}
+            >
+              {navLabels.businessSetup}
             </a>
             <div className="flex items-center gap-3">
               <a
@@ -127,6 +136,14 @@ export function Navbar({ languageButtonLabel, onLanguageToggle, labels }: Navbar
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {navLabels.global}
+            </a>
+            <a
+              href="#uae-business-setup"
+              className="uppercase tracking-widest text-white hover:text-[#F47A20]"
+              style={{ fontSize: '0.875rem', fontWeight: 500 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {navLabels.businessSetup}
             </a>
             <a
               href="#contact"

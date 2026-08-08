@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Navbar } from "./components/navbar";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
+import { BusinessSetupSection } from "./components/business-setup-section";
 import uaeLogo from "../../Logo/UAE.png";
 import africaMapLogo from "../../Logo/Africa-Map-Transparent-PNG.png";
 import chromeOreImage from "../../Content/Chrome Ore.jpeg";
@@ -53,13 +54,14 @@ const features = [
   { imageSrc: africaMapLogo, title: "南部非洲网络", description: "在南非、津巴布韦和赞比亚建立稳定采购网络，直连矿山与加工合作方。" },
   { icon: Handshake, title: "商业经纪服务", description: "连接真实买家与可靠卖家，结构清晰、可执行、透明合规。" },
   { icon: Truck, title: "FOB 全流程服务", description: "从采购、采样到 FOB 操作、船务协调与交付执行的一体化支持。" },
+  { imageSrc: uaeLogo, title: "阿联酋市场准入支持", description: "为计划在阿联酋设立并搭建业务架构的海外企业提供切实可行的支持。" },
 ] as const;
 
 const reasons = [
   { icon: Lock, title: "非洲采购能力强", description: "在南非、津巴布韦、赞比亚拥有成熟的供应链布局" },
   { icon: Zap, title: "质量控制可靠", description: "联合采样、第三方检验与清晰质控标准" },
   { icon: Users, title: "FOB 执行完整", description: "提货、内陆运输、港口处理、报关与装船协调" },
-  { icon: TrendingUp, title: "结构灵活", description: "可支持现货及长期合同的商业模式" },
+  { icon: TrendingUp, title: "阿联酋本地视角", description: "为进入区域贸易并开展商业运营的国际客户提供立足阿联酋的专业视角" },
   { icon: CheckCircle, title: "交易透明", description: "从合同到交付全流程沟通清晰、风险可控" },
   { icon: Clock, title: "长期合作导向", description: "强调执行效率与长期价值共创" },
 ] as const;
@@ -86,7 +88,7 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
       <Navbar
         languageButtonLabel="English"
         onLanguageToggle={onSwitchToEnglish}
-        labels={{ about: "关于我们", products: "产品", global: "FOB服务", contact: "联系我们" }}
+        labels={{ about: "关于我们", products: "产品", global: "FOB服务", businessSetup: "阿联酋企业设立", contact: "联系我们" }}
       />
       <main>
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -114,18 +116,25 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
                 Terramet Global FZE LLC 是一家位于阿联酋的综合贸易与商业经纪公司，核心业务为高品质金属矿石的采购、贸易与供应，始终坚持稳定、透明与长期价值。
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 border border-[#D1D1D1] transition-all hover:border-[#F47A20] hover:shadow-lg group">
-                  <div className="mb-6 inline-block p-4 bg-[#2E2E2E] group-hover:bg-[#F47A20] transition-colors">
-                    {"imageSrc" in feature ? (
-                      <img src={feature.imageSrc} alt={`${feature.title} 图标`} className="h-8 w-8 object-contain" />
-                    ) : (
-                      <feature.icon size={32} color="white" strokeWidth={1.5} />
-                    )}
-                  </div>
-                  <h3 className="uppercase tracking-[0.2em] mb-3" style={{ fontSize: "1rem", fontWeight: 700, color: "#2E2E2E" }}>{feature.title}</h3>
-                  <p style={{ fontSize: "0.875rem", fontWeight: 400, color: "#8A8A8A", lineHeight: 1.6 }}>{feature.description}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:block">
+              {[features.slice(0, 3), features.slice(3)].map((row, rowIndex) => (
+                <div
+                  key={rowIndex}
+                  className={`contents lg:flex lg:justify-center lg:gap-8 ${rowIndex === 1 ? "lg:mt-8" : ""}`}
+                >
+                  {row.map((feature) => (
+                    <div key={feature.title} className="bg-white p-8 border border-[#D1D1D1] transition-all hover:border-[#F47A20] hover:shadow-lg group lg:w-[calc((100%_-_6rem)/4)]">
+                      <div className="mb-6 inline-block p-4 bg-[#2E2E2E] group-hover:bg-[#F47A20] transition-colors">
+                        {"imageSrc" in feature ? (
+                          <img src={feature.imageSrc} alt={`${feature.title} 图标`} className="h-8 w-8 object-contain" />
+                        ) : (
+                          <feature.icon size={32} color="white" strokeWidth={1.5} />
+                        )}
+                      </div>
+                      <h3 className="uppercase tracking-[0.2em] mb-3" style={{ fontSize: "1rem", fontWeight: 700, color: "#2E2E2E" }}>{feature.title}</h3>
+                      <p style={{ fontSize: "0.875rem", fontWeight: 400, color: "#8A8A8A", lineHeight: 1.6 }}>{feature.description}</p>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
@@ -245,6 +254,8 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
           </div>
         </section>
 
+        <BusinessSetupSection language="zh" />
+
         <section className="py-24 bg-[#F5F5F5]">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -286,7 +297,7 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
               <div className="p-6 bg-[#3A3A3A] border border-[#8A8A8A]">
                 <h4 className="uppercase tracking-[0.15em] mb-3" style={{ fontSize: "0.875rem", fontWeight: 700, color: "white" }}>服务时间</h4>
                 <div className="space-y-2" style={{ fontSize: "0.875rem", color: "#D1D1D1" }}>
-                  <div className="flex justify-between"><span>周一 - 周六:</span><span className="text-[#F47A20]">7:00 - 19:00</span></div>
+                  <div className="flex justify-between"><span>周一 - 周六:</span><span className="text-[#F47A20]">07:00 - 19:00</span></div>
                   <div className="flex justify-between"><span>执行覆盖:</span><span className="text-[#F47A20]">全球</span></div>
                 </div>
                 <p className="mt-4 text-[#8A8A8A]" style={{ fontSize: "0.75rem" }}>从采购、单证到装船和海运的全流程协同执行。</p>
@@ -311,6 +322,7 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
                 <li><a href="#about" className="hover:text-[#F47A20] transition-colors" style={{ fontSize: "0.875rem", color: "#8A8A8A" }}>关于我们</a></li>
                 <li><a href="#products" className="hover:text-[#F47A20] transition-colors" style={{ fontSize: "0.875rem", color: "#8A8A8A" }}>产品</a></li>
                 <li><a href="#global" className="hover:text-[#F47A20] transition-colors" style={{ fontSize: "0.875rem", color: "#8A8A8A" }}>FOB服务</a></li>
+                <li><a href="#uae-business-setup" className="hover:text-[#F47A20] transition-colors" style={{ fontSize: "0.875rem", color: "#8A8A8A" }}>阿联酋企业设立</a></li>
                 <li><a href="#contact" className="hover:text-[#F47A20] transition-colors" style={{ fontSize: "0.875rem", color: "#8A8A8A" }}>联系我们</a></li>
               </ul>
             </div>

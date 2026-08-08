@@ -1,4 +1,4 @@
-import { Shield, Globe, Handshake, Truck } from "lucide-react";
+import { Handshake, Truck } from "lucide-react";
 import uaeLogo from "../../../Logo/UAE.png";
 import africaMapLogo from "../../../Logo/Africa-Map-Transparent-PNG.png";
 
@@ -27,6 +27,12 @@ const features = [
     description:
       "Complete trade and logistics support from sourcing and sampling to FOB handling, shipping coordination, and delivery.",
   },
+  {
+    imageSrc: uaeLogo,
+    title: "UAE Market-Entry Support",
+    description:
+      "Practical assistance for overseas businesses establishing and structuring a presence in the UAE.",
+  },
 ];
 
 export function AboutSection() {
@@ -51,34 +57,41 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:block">
+          {[features.slice(0, 3), features.slice(3)].map((row, rowIndex) => (
             <div
-              key={index}
-              className="bg-white p-8 border border-[#D1D1D1] transition-all hover:border-[#F47A20] hover:shadow-lg group"
+              key={rowIndex}
+              className={`contents lg:flex lg:justify-center lg:gap-8 ${rowIndex === 1 ? "lg:mt-8" : ""}`}
             >
-              <div className="mb-6 inline-block p-4 bg-[#2E2E2E] group-hover:bg-[#F47A20] transition-colors">
-                {feature.imageSrc ? (
-                  <img
-                    src={feature.imageSrc}
-                    alt={`${feature.title} icon`}
-                    className="h-8 w-8 object-contain"
-                  />
-                ) : (
-                  <feature.icon size={32} color="white" strokeWidth={1.5} />
-                )}
-              </div>
-              <h3
-                className="uppercase tracking-[0.2em] mb-3"
-                style={{ fontSize: '1rem', fontWeight: 700, color: '#2E2E2E' }}
-              >
-                {feature.title}
-              </h3>
-              <p
-                style={{ fontSize: '0.875rem', fontWeight: 400, color: '#8A8A8A', lineHeight: 1.6 }}
-              >
-                {feature.description}
-              </p>
+              {row.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="bg-white p-8 border border-[#D1D1D1] transition-all hover:border-[#F47A20] hover:shadow-lg group lg:w-[calc((100%_-_6rem)/4)]"
+                >
+                  <div className="mb-6 inline-block p-4 bg-[#2E2E2E] group-hover:bg-[#F47A20] transition-colors">
+                    {feature.imageSrc ? (
+                      <img
+                        src={feature.imageSrc}
+                        alt={`${feature.title} icon`}
+                        className="h-8 w-8 object-contain"
+                      />
+                    ) : (
+                      <feature.icon size={32} color="white" strokeWidth={1.5} />
+                    )}
+                  </div>
+                  <h3
+                    className="uppercase tracking-[0.2em] mb-3"
+                    style={{ fontSize: '1rem', fontWeight: 700, color: '#2E2E2E' }}
+                  >
+                    {feature.title}
+                  </h3>
+                  <p
+                    style={{ fontSize: '0.875rem', fontWeight: 400, color: '#8A8A8A', lineHeight: 1.6 }}
+                  >
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
             </div>
           ))}
         </div>
