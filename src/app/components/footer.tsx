@@ -59,6 +59,15 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="#uae-business-setup"
+                  className="hover:text-[#F47A20] transition-colors"
+                  style={{ fontSize: '0.875rem', color: '#8A8A8A' }}
+                >
+                  UAE Business Setup
+                </a>
+              </li>
+              <li>
+                <a
                   href="#contact"
                   className="hover:text-[#F47A20] transition-colors"
                   style={{ fontSize: '0.875rem', color: '#8A8A8A' }}

@@ -4,6 +4,7 @@ import { HeroSection } from "./components/hero-section";
 import { AboutSection } from "./components/about-section";
 import { ProductsSection } from "./components/products-section";
 import { GlobalSection } from "./components/global-section";
+import { BusinessSetupSection } from "./components/business-setup-section";
 import { WhyChooseSection } from "./components/why-choose-section";
 import { ContactSection } from "./components/contact-section";
 import { Footer } from "./components/footer";
@@ -29,6 +30,7 @@ export default function App() {
         <AboutSection />
         <ProductsSection />
         <GlobalSection />
+        <BusinessSetupSection />
         <WhyChooseSection />
         <ContactSection />
       </main>
