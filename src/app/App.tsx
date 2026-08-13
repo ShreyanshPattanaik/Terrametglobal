@@ -8,6 +8,7 @@ import { BusinessSetupSection } from "./components/business-setup-section";
 import { WhyChooseSection } from "./components/why-choose-section";
 import { ContactSection } from "./components/contact-section";
 import { Footer } from "./components/footer";
+import { FloatingContactActions } from "./components/floating-contact-actions";
 import { ChinesePage } from "./ChinesePage.tsx";
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingContactActions />
     </div>
   );
 }
