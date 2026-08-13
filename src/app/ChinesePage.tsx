@@ -21,6 +21,7 @@ import {
 import { Navbar } from "./components/navbar";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { BusinessSetupSection } from "./components/business-setup-section";
+import { FloatingContactActions } from "./components/floating-contact-actions";
 import uaeLogo from "../../Logo/UAE.png";
 import africaMapLogo from "../../Logo/Africa-Map-Transparent-PNG.png";
 import chromeOreImage from "../../Content/Chrome Ore.jpeg";
@@ -342,6 +343,7 @@ export function ChinesePage({ onSwitchToEnglish }: ChinesePageProps) {
           </div>
         </div>
       </footer>
+      <FloatingContactActions />
     </div>
   );
 }
